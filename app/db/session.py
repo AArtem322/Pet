@@ -1,15 +1,14 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import DeclarativeBase, sessionmaker, Session
+from sqlalchemy.orm import sessionmaker, Session
 
-DATABASE_URL = "postgresql+psycopg2://postgres:Artul251220@localhost:5432/postgres"
+from app.core.database import DATABASE_URL
+
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker[Session](bind=engine)
 
 
-class Base(DeclarativeBase):
-    pass
-
 def get_db():
+    """Функуия для инъекции сессии Базв Данных"""
     db = SessionLocal()
     try:
         yield db
