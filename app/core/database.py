@@ -1,1 +1,0 @@
-DATABASE_URL = "postgresql+psycopg2://postgres:Artul251220@localhost:5432/postgres"

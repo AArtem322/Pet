@@ -8,13 +8,10 @@ from app.db.session import engine
 from app.models.base import Base
 
 
-@asynccontextmanager
-async def lifespan(_: FastAPI):
-    Base.metadata.create_all(bind=engine)
-    yield
 
 
-app = FastAPI(lifespan=lifespan)
+
+app = FastAPI()
 app.include_router(books_router)
 app.include_router(categories_router)
 app.add_middleware(
