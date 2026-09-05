@@ -11,7 +11,7 @@ def test_list_books_returns_pydantic_models(
     service: BookService,
     repository_mock: Mock,
 ) -> None:
-    # Имитируем, что метод get_all репозитория вернет эти книги
+    # Имитируем, что метод get_all_books репозитория вернет эти книги
     repository_mock.get_all_books.return_value = [
         Book(id="book-1", title="Evgeniy Onegin", is_read=False),
         Book(id="book-2", title="Война и Мир", is_read=True),
