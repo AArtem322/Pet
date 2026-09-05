@@ -1,5 +1,5 @@
-from fastapi import HTTPException
 from sqlalchemy.orm import Session
+
 from app.repositories.books import BookRepository
 from app.schemas.books import BookCreate, BookRead, BookUpdate
 

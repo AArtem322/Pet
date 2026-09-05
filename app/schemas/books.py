@@ -8,10 +8,11 @@ class BookRead(BaseModel):
 
     model_config = ConfigDict(from_attributes=True)
 
+
 class BookCreate(BaseModel):
     title: str
 
 
 class BookUpdate(BaseModel):
-    title: str | None=None
-    is_read: bool | None=None
+    title: str | None = None
+    is_read: bool | None = None

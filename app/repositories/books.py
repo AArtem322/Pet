@@ -2,7 +2,6 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.books import Book
-from app.schemas.books import  BookCreate
 
 
 class BookRepository:

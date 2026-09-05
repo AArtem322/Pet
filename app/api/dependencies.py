@@ -10,6 +10,7 @@ def get_book_service(db: Session = Depends(get_db)):
     """Функуия для инъекции зависимостей BookService"""
     return BookService(db)
 
+
 def get_category_service(db: Session = Depends(get_db)):
     """Функуия для инъекции зависимостей CategoryService"""
     return CategoryService(db)
